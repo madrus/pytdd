@@ -40,3 +40,10 @@ Django among others (`pip install -r requirements.txt`)
 13. `python manage.py runserver` and open `http://localhost:8000`
 14. run a single test: `python func_tests\func_tests.py`
 15. run unit tests: `python manage.py tests`
+
+>***
+> When refactoring, work on either the code or the tests, but not both
+at once!
+>***
+
+
