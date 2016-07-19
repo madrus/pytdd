@@ -22,6 +22,7 @@ Here are some [notes on this book](http://webseitz.fluxent.com/wiki/TestDrivenDe
 Another useful notes on [Python in VSCode](https://github.com/DonJayamanne/pythonVSCode).
 
 ---
+
 ## Chapter 1
 
 1. created a new virtual environment and installed the necessary packages,
