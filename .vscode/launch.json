@@ -6,7 +6,7 @@
             "type": "python",
             "request": "launch",
             "stopOnEntry": false,
-            "program": "${workspaceRoot}/func_tests.py",
+            "program": "${workspaceRoot}\\func_tests.py",
             "debugOptions": [
                 "WaitOnAbnormalExit",
                 "WaitOnNormalExit",
@@ -18,7 +18,7 @@
             "type": "python",
             "request": "launch",
             "stopOnEntry": false,
-            "program": "${workspaceRoot}/manage.py",
+            "program": "${workspaceRoot}\\manage.py",
             "args": [
                 "test"
             ],
@@ -33,7 +33,7 @@
             "type": "python",
             "request": "launch",
             "stopOnEntry": true,
-            "program": "${workspaceRoot}/manage.py",
+            "program": "${workspaceRoot}\\manage.py",
             "args": [
                 "runserver",
                 "--noreload"
