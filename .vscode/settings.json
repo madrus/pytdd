@@ -1,0 +1,7 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+	// Python options
+	"python.pythonPath": "j:/py/ENV27/Scripts/python",
+	"python.linting.pylintPath": "pylint --load-plugins pylint_django",
+	"python.linting.pylintArgs": ["--load-plugins", "pylint_django"]
+}
