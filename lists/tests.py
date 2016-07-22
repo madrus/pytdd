@@ -36,6 +36,6 @@ class HomePageTest(TestCase):
     def test_home_page_returns_correct_html(self):
         request = HttpRequest()
         response = home_page(request)
-        expected_html = render_to_string('home.html') # Django < v1.8
+        # expected_html = render_to_string('home.html') # Django < v1.8
         expected_html = render_to_string('home.html', request=request) # Django >= v1.8
         self.assertEqual(expected_html, response.content.decode())
