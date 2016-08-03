@@ -13,14 +13,14 @@ class HomePageTest(TestCase):
         self.assertEqual(found.func, home_page)
 
 
-    def test_home_page_can_save_a_POST_request(self):
+    def test_home_page_returns_correct_html(self):
+        # SETUP
         request = HttpRequest()
         request.method = 'POST'
         request.POST['item_text'] = "A new list item"
-
+        # EXERCISE
         response = home_page(request)
         actual_html = response.content.decode()
-        self.assertIn("A new list item", actual_html)
         # expected_html = render_to_string( # Django < v1.8
         #     'home.html',
         #     {"new_item_text": "A new list item"}
@@ -30,12 +30,18 @@ class HomePageTest(TestCase):
             {"new_item_text": "A new list item"},
             request=request
         )
-        self.assertEqual(expected_html, actual_html)
+        # ASSERT
+        self.assertIn("A new list item", actual_html)
+        self.assertEqual(actual_html, expected_html)
 
 
-    def test_home_page_returns_correct_html(self):
+    def test_home_page_can_save_a_POST_request(self):
+        # SETUP
         request = HttpRequest()
+        request.method = 'POST'
+        request.POST['item_text'] = "A new list item"
+        # EXERCISE
         response = home_page(request)
-        # expected_html = render_to_string('home.html') # Django < v1.8
-        expected_html = render_to_string('home.html', request=request) # Django >= v1.8
-        self.assertEqual(expected_html, response.content.decode())
+        actual_html = response.content.decode()
+        # ASSERT
+        self.assertIn("A new list item", actual_html)
