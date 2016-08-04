@@ -35,13 +35,13 @@ class HomePageTest(TestCase):
         self.assertEqual(actual_html, expected_html)
 
 
-    def test_home_page_can_save_a_POST_request(self):
-        # SETUP
-        request = HttpRequest()
-        request.method = 'POST'
-        request.POST['item_text'] = "A new list item"
-        # EXERCISE
-        response = home_page(request)
-        actual_html = response.content.decode()
-        # ASSERT
-        self.assertIn("A new list item", actual_html)
+    # def test_home_page_can_save_a_POST_request(self):
+    #     # SETUP
+    #     request = HttpRequest()
+    #     request.method = 'POST'
+    #     request.POST['item_text'] = "A new list item"
+    #     # EXERCISE
+    #     response = home_page(request)
+    #     actual_html = response.content.decode()
+    #     # ASSERT
+    #     self.assertIn("A new list item", actual_html)
