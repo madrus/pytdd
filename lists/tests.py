@@ -1,12 +1,19 @@
+import unittest
+from superlists.settings import TEMPLATES
 from django.core.urlresolvers import resolve
 from django.http import HttpRequest
 from django.template.loader import render_to_string
-from django.test import TestCase
+# from django.test import TestCase
 
 from lists.views import home_page
 
 
-class HomePageTest(TestCase):
+class HomePageTest(unittest.TestCase):
+
+    def test_settings(self):
+        print TEMPLATES[0]
+        pass
+
 
     def test_root_url_resolves_to_home_page_view(self):
         found = resolve('/')
